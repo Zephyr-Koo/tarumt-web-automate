@@ -9,6 +9,6 @@ var noOfHour  = classType == 'T' ? 1.5 : 2; // 2 or 1.5
 $("#id-date-picker-1").datepicker('setDate', startDate);
 $('#fgroup').val(group);
 $('select[name=funits]').prop('selectedIndex', 1); // non-default item
-$('input[name=fclass]').filter('[value="' + classType + '"]').prop("checked", true);
+$('input[name=fclass]').filter('[value="' + classType + '"]').prop('checked', true);
 $('#fhour').val(noOfHour);
 $('button[name=fsubmit]').first().click();
