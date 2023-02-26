@@ -8,12 +8,11 @@ const TeachingHours = {
 // Configuration
 let courseCode  = 'AACS3013';
 let classGroup = 'DFT1S3G18'; // DFT1S3G18, DFT1S3G19, DFT1S3G20
-let classType  = 'Tutorial'; // Lecture, Tutorial, Practical
 
-let claimDate = new Date('2023-02-18');
+let classType  = 'T'; // (L)ecture, (T)utorial, (P)ractical
 
+let claimDate = new Date('2023-03-04');
 let noOfHours = TeachingHours[classType];
-let classTypeValue = classType.charAt(0);
 
 // Automating claim process //
 
@@ -29,7 +28,7 @@ $('select[name=funits]').children().filter(function() {
 }).prop('selected', true);
 
 // 4) Set class type
-$('input[name=fclass]').filter(`[value=${classTypeValue}]`).prop('checked', true);
+$('input[name=fclass]').filter(`[value=${classType}]`).prop('checked', true);
 
 // 5) Set no. of teaching hours
 $('#fhour').val(noOfHours);
