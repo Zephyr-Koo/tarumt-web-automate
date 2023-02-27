@@ -1,21 +1,19 @@
-// Lookup
+// Lookup //
 const TeachingHours = {
     Lecture  : 2,
     Tutorial : 1,
     Practical: 1
 };
 
-// Configuration
+// Configurations //
 let courseCode  = 'AACS3013';
 let classGroup = 'DFT1S3G18'; // DFT1S3G18, DFT1S3G19, DFT1S3G20
-
 let classType  = 'T'; // (L)ecture, (T)utorial, (P)ractical
 
-let claimDate = new Date('2023-03-04');
+let claimDate = new Date('2023-02-18');
 let noOfHours = TeachingHours[classType];
 
 // Automating claim process //
-
 // 1) Set teaching date
 $('#id-date-picker-1').datepicker('setDate', claimDate);
 
