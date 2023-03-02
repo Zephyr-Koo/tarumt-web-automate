@@ -6,7 +6,7 @@ const TeachingHours = {
 };
 
 // Configurations //
-let courseCode  = 'AACS3013';
+let courseCode = 'AACS3013';
 let classGroup = 'DFT1S3G18'; // DFT1S3G18, DFT1S3G19, DFT1S3G20
 let classType  = 'T'; // (L)ecture, (T)utorial, (P)ractical
 
