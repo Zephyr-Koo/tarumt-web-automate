@@ -1,8 +1,8 @@
 // Lookup //
-const TeachingHours = {
-    Lecture  : 2,
-    Tutorial : 1,
-    Practical: 1
+let TeachingHours = {
+  L : 2, // Lecture
+  T : 1, // Tutorial
+  P : 1  // Practical
 };
 
 // Configurations //
@@ -13,23 +13,24 @@ let classType  = 'T'; // (L)ecture, (T)utorial, (P)ractical
 let claimDate = new Date('2023-02-18');
 let noOfHours = TeachingHours[classType];
 
-// Automating claim process //
-// 1) Set teaching date
-$('#id-date-picker-1').datepicker('setDate', claimDate);
+(function AutomateClaimProcess(claimDate, classGroup, courseCode, classType, noOfHours) {
+  // 1) Set teaching date
+  $('#id-date-picker-1').datepicker('setDate', claimDate);
 
-// 2) Set class group
-$('#fgroup').val(classGroup);
+  // 2) Set class group
+  $('#fgroup').val(classGroup);
 
-// 3) Set course
-$('select[name=funits]').children().filter(function() {
+  // 3) Set course
+  $('select[name=funits]').children().filter(function() {
     return this.text.includes(courseCode);
-}).prop('selected', true);
+  }).prop('selected', true);
 
-// 4) Set class type
-$('input[name=fclass]').filter(`[value=${classType}]`).prop('checked', true);
+  // 4) Set class type
+  $('input[name=fclass]').filter(`[value=${classType}]`).prop('checked', true);
 
-// 5) Set no. of teaching hours
-$('#fhour').val(noOfHours);
+  // 5) Set no. of teaching hours
+  $('#fhour').val(noOfHours);
 
-// 6) Click on Add button
-$('button[name=fsubmit]').first().click();
+  // 6) Click on Add button
+  $('button[name=fsubmit]').first().click();
+})(claimDate, classGroup, courseCode, classType, noOfHours);
