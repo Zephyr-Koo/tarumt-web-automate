@@ -1,4 +1,4 @@
-## How to use
+## How to use `claim-script.js`
 1. Logon to Staff Intranet
 2. Click `Staff Apps` on left panel (blue briefcase icon)
 3. Expand `Claim Application` accordion
